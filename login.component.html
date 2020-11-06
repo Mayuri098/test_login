@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>LOGIN Page</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <!-- Font Awesome -->
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Material Design Bootstrap -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="bg">
+      <div class="row">
+
+
+
+
+        <div class="col-md-12"> 				
+              <ul class="nav navbar-left mt-3">
+                  <li class="nav-item">
+                      <a href="https://navriti.com/"><img src="assets/images/logo.png"/></a>
+                  </li>
+              </ul>  
+      </div>    
+
+
+
+        <div class="col-md-6 mx-auto my-5">
+          <section
+            class="form-elegant w3-animate-zoom"
+            style="position: fixed; top: 18%; left: 26%; width: 700px">
+            <mdb-card
+              style="
+                background: linear-gradient(
+                  rgba(0, 0, 0, 0.8),
+                  rgba(0, 0, 0, 0.8)
+                );
+                
+              "
+            >
+              <mdb-card-body class="mx-4 my-2 mt-0">
+                <!--Header-->
+                <br />
+                <div class="text-center">
+                  <img src="/assets/images/image.png" />
+                </div>
+                <br />
+
+                <div
+                  id="warning"
+                  class="text-center"
+                  style="
+                    color: red;
+                  "
+                ></div>
+                <br />
+
+                <form>
+                  <div class="md-form">
+                    <mdb-icon
+                      fas
+                      icon="user"
+                      class="prefix dark-grey-text"
+                    ></mdb-icon>
+                    <input
+                      type="text"
+                      id="username"
+                      class="form-control"
+                      formControlName="elegantFormEmailEx"
+                      mdbInput
+                    />
+                    <label for="elegantFormEmailEx">Your Login ID</label>
+                  </div>
+
+                  <div class="md-form pb-0">
+                    <mdb-icon
+                      fas
+                      icon="lock"
+                      class="prefix dark-grey-text"
+                    ></mdb-icon>
+                    <input
+                      type="password"
+                      id="pwd"
+                      formControlName="elegantFormPasswordEx"
+                      class="form-control"
+                      mdbInput
+                    />
+                    <label for="elegantFormPasswordEx">Your password</label>
+                  </div>
+
+                  <div class="d-flex justify-content-end mb-1 pb-2 mt-0">
+                    <a style="color: rgb(92, 88, 88); align-content : flex-end;" routerLink="/forgotpassword" >Forgot Password?</a>
+                  </div> 
+                  
+                  <div class="text-center pt-0 mt-0 mb-5 animated bounceIn">
+                    <button
+                      style="border-radius: 20px"
+                      type="button"
+                      mdbBtn
+                      data-toggle="modal"
+                      data-target="#basicExampleModal"
+                      id="login"
+                      gradient="aqua"
+                      block="true"
+                      rounded="true"
+                      class="waves-light"
+                      mdbWavesEffect
+                      (click)="test()"
+                    >
+                      LOGIN
+                    </button>
+                  </div>
+                  <div
+                    class="spinner-border text-success mb-5"
+                    style="
+                      display: none;
+                      position: relative;
+                      top: 59.5%;
+                      left: 47%;
+                    "
+                    id="log-in"
+                  ></div>
+                </form>
+                <!--Body-->
+              </mdb-card-body>
+              
+            </mdb-card>
+          </section>
+        </div>
+      </div>
+
+
+
+      <div class="modal-footer mx-5 pt-3 mb-1 justify-content-center fixed-bottom">
+			<p style="color: rgb(255, 255, 255);" class="font-small  d-flex">
+			  © 2020 Copyright:
+			  <a style="color: rgb(240, 234, 234);"
+				href="https://navriti.com/"
+				class=" ml-1"
+				target="_blank"
+				><b> Navriti Technologies PVT LTD. </b></a
+			  >
+			</p>
+		  </div>
+
+
+    </div>
+    <!-- JQuery -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <!-- Bootstrap tooltips -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
+    ></script>
+    <!-- Bootstrap core JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"
+    ></script>
+    <!-- MDB core JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.js"
+    ></script>
+
+    <!-- Your custom scripts (optional) -->
+  </body>
+</html>
